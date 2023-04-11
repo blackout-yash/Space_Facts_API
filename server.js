@@ -8,6 +8,11 @@ import { errorMiddleware } from "./middlewares/error.js";
 const app = express();
 app.use(express.json());
 
+app.use(function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    next();
+});
+
 dotenv.config({
     path: "./config/.env"
 })
