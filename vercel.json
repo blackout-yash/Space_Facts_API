@@ -1,0 +1,16 @@
+{
+    "version": 1,
+    "name": "Space_Facts_API",
+    "builds": [
+        {
+            "src": "server.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/server.js"
+        }
+    ]
+}
